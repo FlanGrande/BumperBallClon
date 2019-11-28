@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://materials/grey_degradation.tres" type="Material" id=1]
+[ext_resource path="res://scenes/BumperPlayer.tscn" type="PackedScene" id=2]
+
+[node name="GameView" type="Node2D"]
+position = Vector2( -1, 0 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+material = ExtResource( 1 )
+margin_left = -31.0
+margin_top = -32.0
+margin_right = 1057.0
+margin_bottom = 640.0
+
+[node name="BumperPlayer" parent="Control" instance=ExtResource( 2 )]
+position = Vector2( 193, 288 )
